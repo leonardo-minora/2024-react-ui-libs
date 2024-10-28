@@ -1,7 +1,9 @@
+import { Button } from "./components/ui/button";
+
 export const App = () => {
 	return (
 		<>
-			<h1>Tela de login</h1>
+			<Button>Tela de login</Button>
 		</>
 	);
 };
