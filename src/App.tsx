@@ -19,23 +19,41 @@ import {
 	CarouselPrevious,
 } from "./components/ui/carousel";
 
-import carEletricImg from "./assets/react.svg";
-import carDriverImg from "./assets/react.svg";
+import task_0_Img from "./assets/task-0.svg";
+import task_1_Img from "./assets/task-1.svg";
+import task_2_Img from "./assets/task-2.svg";
+import task_3_Img from "./assets/task-3.svg";
+import task_4_Img from "./assets/task-4.svg";
 
 export const App = () => {
 	return (
-		<main>
-			<div>
-				<Carousel>
+		<main className="h-screen flex w-full">
+			<div className="bg-primary-foreground w-full h-full flex items-center justify-center p-16">
+				<Carousel className="w-full max-w-xl">
 					<CarouselContent>
 						<CarouselItem>
-							<div>
-								<img src={carDriverImg} alt="Contrate um motorista de carro" />
+							<div className="flex aspect-square bg-background rounded p-8">
+								<img src={task_0_Img} alt="Contrate um motorista de carro" />
 							</div>
 						</CarouselItem>
 						<CarouselItem>
-							<div>
-								<img src={carEletricImg} alt="Alugue um carro elétrico" />
+							<div className="flex aspect-square bg-background rounded p-8">
+								<img src={task_1_Img} alt="Alugue um carro elétrico" />
+							</div>
+						</CarouselItem>
+						<CarouselItem>
+							<div className="flex aspect-square bg-background rounded p-8">
+								<img src={task_2_Img} alt="Alugue um carro elétrico" />
+							</div>
+						</CarouselItem>
+						<CarouselItem>
+							<div className="flex aspect-square bg-background rounded p-8">
+								<img src={task_3_Img} alt="Alugue um carro elétrico" />
+							</div>
+						</CarouselItem>
+						<CarouselItem>
+							<div className="flex aspect-square bg-background rounded p-8">
+								<img src={task_4_Img} alt="Alugue um carro elétrico" />
 							</div>
 						</CarouselItem>
 					</CarouselContent>
@@ -43,10 +61,10 @@ export const App = () => {
 					<CarouselPrevious />
 				</Carousel>
 			</div>
-			<section>
-				<Card>
+			<section className="flex items-center justify-center bg-background h-full max-w-3xl w-full p-4">
+				<Card className="w-full max-w-md">
 					<CardHeader>
-						<CardTitle>
+						<CardTitle className="text-2xl font-bold tracking-tighter">
 							Entre com sua conta
 						</CardTitle>
 						<CardDescription>
@@ -66,19 +84,19 @@ export const App = () => {
 								type="password"
 							/>
 						</div>
-						<Button>Entrar</Button>
-						<div>
+						<Button className="mt-6 w-full">Entrar</Button>
+						<div className="flex items-center gap-6 mt-4">
 							<Separator />
-							<span>ou</span>
+							<span className="text-xs text-muted-foreground">ou</span>
 							<Separator />
 						</div>
-						<Button variant="outline">
-							<GitHubLogoIcon/>
+						<Button variant="outline" className="mt-4 w-full">
+							<GitHubLogoIcon className="mr-2" />
 							Entrar com o GitHub
 						</Button>
 					</CardContent>
 					<CardFooter>
-						<p>
+						<p className="text-muted-foreground text-center text-sm">
 							Ao entrar em nossa plataforma você concorda com nossos Termos de
 							uso e Política de privacidade.
 						</p>
